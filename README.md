@@ -1,4 +1,3 @@
-# pinpong
 from pygame import *
 from random import *
 
@@ -89,16 +88,19 @@ while game:
     ball.update()
     display.update()
 while lose1:
-    lose1txt = "Победил игрок 1"
+    lose1txt = "Победил игрок 2"
     lose1text = font1.render(lose1txt, 1, (255,0,0))
-    scr.blit(lose1text, (200,200))
     scr.blit(back,(0,0))
+    scr.blit(lose1text, (200,200))
     for e in event.get():
         if e.type == QUIT:
             lose1 = False
     display.update()
 while lose2:
+    lose2txt = "Победил игрок 1"
+    lose2text = font1.render(lose2txt, 1, (255,0,0))
     scr.blit(back,(0,0))
+    scr.blit(lose2text, (200,200))
     for e in event.get():
         if e.type == QUIT:
             lose2 = False
